@@ -1,0 +1,5 @@
+name: demo 
+on: push
+jobs:
+    first-job:
+       uses: ./.github/workflows/demo123.yaml
