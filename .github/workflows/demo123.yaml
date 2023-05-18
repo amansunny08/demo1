@@ -6,7 +6,9 @@ on:
       config-path:
         required: true
         type: string
-
+      url_path:
+          required: true
+          type: string
       
     # secrets:
     #   token:
@@ -28,3 +30,4 @@ jobs:
          ID=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
          echo "$ID" >> $GITHUB_STEP_SUMMARY  
          echo "Job status: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+         echo "https://docs.github.com/en/actions/using-workflows/${{ inputs.url_path }}" >> $GITHUB_STEP_SUMMARY
