@@ -7,7 +7,7 @@ on:
         required: true
         type: string
       url_path:
-          required: false
+          required: true
           type: string
       
     # secrets:
