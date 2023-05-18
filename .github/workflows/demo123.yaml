@@ -22,10 +22,13 @@ jobs:
       run: |
          echo "Hello world"  >> $GITHUB_STEP_SUMMARY 
          echo "Name of workflow ${GITHUB_WORKFLOW}" >> $GITHUB_STEP_SUMMARY 
+         echo "${GITHUB_ACTION}" >> $GITHUB_STEP_SUMMARY 
+         echo "${GITHUB_REF_NAME}" >> $GITHUB_STEP_SUMMARY 
     - name: print branch name
       run: |
          echo "${{ github.ref }}" >> $GITHUB_STEP_SUMMARY
          echo "Branch URL: https://github.com/${{ github.repository }}/tree/${{ github.ref }}" >> $GITHUB_STEP_SUMMARY
+         echo "Branch URL: https://github.com/${GITHUB_REPOSITORY}/tree/${{ GITHUB_REF}}" >> $GITHUB_STEP_SUMMARY
 
     - name: print var
       run: |
