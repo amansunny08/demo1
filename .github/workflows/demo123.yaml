@@ -2,10 +2,10 @@ name: Reusable workflow example
 
 on:
   workflow_call:
-    # inputs:
-    #   config-path:
-    #     required: true
-    #     type: string
+    inputs:
+      config-path:
+        required: true
+        type: string
     # secrets:
     #   token:
     #     required: true
@@ -15,4 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: run hellow world
-      run: echo "Hello world"
+      run: echo "Hello world"  >> $GITHUB_STEP_SUMMARY 
+
+    - name: print var
+      run: echo "$config-path"  >> $GITHUB_STEP_SUMMARY

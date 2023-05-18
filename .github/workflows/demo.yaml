@@ -3,3 +3,5 @@ on: push
 jobs:
     first-job:
        uses: ./.github/workflows/demo123.yaml
+       with:
+          config-path: "hello sunny"
