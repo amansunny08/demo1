@@ -5,4 +5,4 @@ jobs:
        uses: ./.github/workflows/demo123.yaml
        with:
           config-path: "hello sunny"
-          url_path: "workflow-commands-for-github-actions"
+          # url_path: "workflow-commands-for-github-actions"
