@@ -5,7 +5,7 @@ jobs:
        runs-on: ubuntu-latest
        steps:
        - name: step1 
-         run: echo "Heelo world"
+         run:  "Heelo world"
     
     second_job:     
          needs: first_job
