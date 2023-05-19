@@ -8,6 +8,8 @@ jobs:
          run: echo "Heelo world"
     
     second_job:     
+         needs: first_job
+         if: always()
          uses: ./.github/workflows/demo123.yaml
          with:
             config-path: "hello sunny"
