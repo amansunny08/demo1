@@ -6,8 +6,9 @@ jobs:
        steps:
        - name: step1 
          run: echo "Heelo world"
-         
-       - uses: ./.github/workflows/demo123.yaml
+    
+    second_job:     
+         uses: ./.github/workflows/demo123.yaml
          with:
             config-path: "hello sunny"
             url_path: "workflow-commands-for-github-actions"
